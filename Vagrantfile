@@ -43,7 +43,7 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "./data", "/data"
+  config.vm.synced_folder "./project", "/project"
 
   # disable default vagrant share
   config.vm.synced_folder ".", "/vagrant", disabled: true
@@ -54,7 +54,7 @@ Vagrant.configure("2") do |config|
   #
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
-    vb.gui = true
+    vb.gui = false 
  
     # Customize the amount of memory on the VM:
     vb.memory = "2048"
